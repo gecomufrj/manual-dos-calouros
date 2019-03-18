@@ -1,0 +1,120 @@
+\documentclass[titlepage]{article}
+\usepackage{pdfpages}
+\usepackage[a4paper, portrait,left=3cm,right=3cm, top = 2cm]{geometry}
+\usepackage[portuguese]{babel}
+\usepackage{caption}
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{csquotes}
+\usepackage{subfiles}
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+
+% Configurações
+
+\hypersetup{
+	colorlinks,breaklinks,
+    urlcolor=[rgb]{0,0.1,0.5},
+    linkcolor=[rgb]{0,0.1,0.5}
+}
+
+\setlength{\parindent}{2em}
+
+% Redefinições de comandos e novos comandos
+\renewcommand{\thesection}{\hspace*{-1.0em}}
+\renewcommand{\thesubsection}{\hspace*{-1.0em}}
+\renewcommand{\thesubsubsection}{\hspace*{-1.0em}}
+
+\newcommand{\ssection}[1]{
+	\section{#1}
+}
+
+\newcommand{\ssubsection}[1]{
+	\subsection{#1}
+}
+
+\newcommand{\ssubsubsection}[1]{
+	\subsubsection{#1}
+}
+
+\newcommand{\citacao}[1]{
+  \vspace{1em}\hrule
+  \begin{displayquote}
+      \begin{flushright}
+          #1
+      \end{flushright}
+  \end{displayquote}
+}
+% Conteúdo
+
+\begin{document}
+\title{Manual do Calouro do DEL}
+
+\date{2019.1}
+
+\author{GECOM\authorcr{Grupo de Eletrônica e de Computação}}
+
+\affil{DEL/Poli/UFRJ}
+\affil{Departamento de Engenharia Eletrônica e de Computação\\Escola Politécnica -- Universidade Federal do Rio de Janeiro}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\citacao{``\textit{Software} é a parte que você xinga; \textit{hardware} é a parte que você chuta.''}
+\pagebreak
+
+
+% Introdução
+\subfile{tex/introducao}
+\citacao{``Não é \textit{bug}, é \textit{feature}.''}
+\pagebreak
+
+% Centro de Tecnologia
+\subfile{tex/ct}
+\citacao{``A diferença entre `quase funcionando' e `funcionando mal' é estar funcionando.''}
+\pagebreak
+
+% Alimentação
+\subfile{tex/alimentacao}
+\citacao{``A unidade monetária do CT é o `bandejão'.''}
+\pagebreak
+
+% Deslocamento e Transporte
+\subfile{tex/deslocamento_e_transporte}
+\citacao{``SAIR''}
+\pagebreak
+
+% Curso
+\subfile{tex/curso}
+\citacao{``Não gostou? Eu apago!''}
+\pagebreak
+
+\subfile{tex/informacao_ingresso_curso}
+\citacao{``Tá entendendo? Tá entendendo não..." Campelo, Mauros.''}
+\pagebreak
+
+% Drive do Gecom
+\subfile{tex/drive}
+\citacao{``Existem 10 tipos de pessoas: as que entendem binário, e as que não entendem.''}
+\pagebreak
+
+%Assistências estudantis
+%\subfile{tex/assistencia_estudantil}
+%\citacao{``Já tentou desligar e ligar novamente?''}
+%\pagebreak
+
+%Atividades extracurriculares
+\subfile{tex/atividades_extras}
+\citacao{``A melhor atividade extracurricular é levantamento de garfo no RU.''}
+\pagebreak
+
+%Direitos do estudante
+\subfile{tex/direitos}
+\citacao{``\textcolor{blue}{[\underline{\textit{citation needed}}]}''}
+
+\end{document}
